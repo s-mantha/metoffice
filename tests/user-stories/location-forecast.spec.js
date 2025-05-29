@@ -16,7 +16,7 @@ test('User story: Search, forecast, pollen and map', async ({ page }) => {
   await home.searchLocation('Cambridge');
 
   // --------- Forecast Page ---------
-  await forecast.selectDate('Thu 29 May');
+  await forecast.selectDate('Sat');
   await forecast.toggleReducedForecast();
   await forecast.toggleFullForecast();
   await forecast.setTemperatureUnits('f');

@@ -5,7 +5,8 @@ const test = baseTest.extend({
   // Override the 'page' fixture with a custom browser/context/page lifecycle
   page: async ({ }, use) => {
     // Launch browser in headful mode
-    const browser = await chromium.launch({ headless: false });
+    const isCI = process.env.CI;
+    const browser = await chromium.launch({ headless: isCI ? true : false });
     const context = await browser.newContext({
       viewport: { width: 1800, height: 600 }, // set large viewport
       });

@@ -42,7 +42,3 @@ To see the report:
 ```bash
 npx playwright show-report
 ```
-
-## GitLab CI/CD
-
-This project is CI-ready with GitLab. The `.gitlab-ci.yml` config runs Playwright tests in a headless container.
